@@ -7,12 +7,15 @@ import IconLinkedin from '../components/icons/IconLinkedin.astro';
 import Badge from '../components/Badge.astro';
 import Experience from '../components/Experience.astro';
 import Aboutme from '../components/Aboutme.astro';
+import Proyects from '../components/Proyects.astro';
+import IconEmail from '../components/icons/IconEmail.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="flex justify-center 
 	inset-0 -z-10  items-start px-5 py-24 
 	[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+	
 		<Header/>
 		<div class="md:max-w-[900px] mx-6 py-3 md:py-36">
 			<div class="w-full flex ">
@@ -21,12 +24,16 @@ import Aboutme from '../components/Aboutme.astro';
 			<div class="w-full mt-8 ">
 				<Badge Icon={IconGit} title="GitHub" link='https://github.com/Didier321'/>
 				<Badge Icon={IconLinkedin} title="Linkedin" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
+				<Badge Icon={IconEmail} title="Corre" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
 			</div>
 			<div class="w-full mt-28">
 				<Experience/>
 			</div>
 			<div class="w-full mt-28">
 				<Aboutme/>
+			</div>
+			<div class="w-full mt-28">
+				<Proyects/>
 			</div>
 		</div>
 			

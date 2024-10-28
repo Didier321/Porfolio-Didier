@@ -1,0 +1,71 @@
+---
+import IconGit from "./icons/IconGit.astro"
+import IconUnlink from '../components/icons/IconUnlink.astro';
+
+const Projects = [
+    { 
+        title:"SOFF",
+        description:"SOFF es un aplicativo web que se encarga en suplir la necesidad de navarra, un negocio de comidas rapidas. El proposito de SOFF es mantener un control interno de Navarra, este aplicativo se desarrollo principalmente con PostgreSql, Python con FastApi y Nexjs.",
+        img:'Foto.png',
+        linkCode:"",
+        linkWeb:""
+    },
+    { 
+        title:"SOFF",
+        description:"SOFF es un aplicativo web que se encarga en suplir la necesidad de navarra, un negocio de comidas rapidas. El proposito de SOFF es mantener un control interno de Navarra, este aplicativo se desarrollo principalmente con PostgreSql, Python con FastApi y Nexjs.",
+        img:'Foto.png',
+        linkCode:"",
+        linkWeb:""
+    },
+]
+---
+<proyects>
+    <h1 class="outfit mb-10 text-3xl">Proyectos</h1>
+    <div class="w-full md:flex md:gap-10 md:flex-col ">
+        {
+        Projects.map((project) => (
+        <div class="mb-8 md:felx md:justify-end md:items-center md:w-full">
+
+            <div class="card w-full max-h-[470px] h-auto bg-black/50 
+            rounded-md flex flex-col min-w-[320px] p-2
+            border-[1px] border-white/35 bg-opacity-40 border-opacity-60
+            md:flex-none md:grid md:grid-cols-2 md:grid-rows-1 md:max-h-[230px]
+            ">
+                <img class="rounded-md md:h-[200px]" src="/Soff.png" alt="soff img">
+                <div>
+                <h2 class="outfit mt-2 text-[#CCCCCC] text-xl font-semibold 
+                tracking-wide">
+                    {project.title}
+                </h2>
+                <span class="outfit text-[#CCCCCC] w-full p-2 text-justify text-base
+                tracking-tight leading-6 normal-case text-wrap align-bottom font-normal
+                px-2
+                "> 
+                    {project.description}
+                </span>
+                <div class="h-full flex gap-3 items-end mt-4 text-[#CCCCCC] md:h-auto md:mt-2">
+                    <a href={project.linkCode} class="outfit w-full  px-3 h-[40px] 
+                        bg-gradient-to-l from-red-400 via-red-700 to-pink-800
+                        rounded-md flex justify-center items-center gap-2">
+                        <IconGit/>
+                        Codigo
+                    </a>
+                    <a href={project.linkWeb} class="outfit w-full  px-3 h-[40px] 
+                        bg-gradient-to-l from-red-400 via-red-700 to-pink-800
+                        rounded-md flex justify-center items-center gap-2">
+                            <IconUnlink/>Saber más
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>))
+        }
+    </div>
+</proyects>
+
+
+<style>
+    .card{
+        box-shadow: 8px 8px 12px rgba(245, 201, 201, 0.199);
+    }
+</style>
