@@ -9,6 +9,7 @@ import Experience from '../components/Experience.astro';
 import Aboutme from '../components/Aboutme.astro';
 import Proyects from '../components/Proyects.astro';
 import IconEmail from '../components/icons/IconEmail.astro';
+import HardSkills from '../components/HardSkills.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,7 +19,8 @@ import IconEmail from '../components/icons/IconEmail.astro';
 	
 		<Header/>
 		<div class="md:max-w-[900px] mx-6 py-3 md:py-36">
-			<div class="w-full flex ">
+
+			<div  class="w-full flex ">
 				<Home/>
 			</div>
 			<div class="w-full mt-8 ">
@@ -33,13 +35,19 @@ import IconEmail from '../components/icons/IconEmail.astro';
 				<Aboutme/>
 			</div>
 			<div class="w-full mt-28">
+				<HardSkills/>
+			</div>
+			<div class="w-full mt-28">
 				<Proyects/>
 			</div>
+			
 		</div>
 			
 	</main>
 </Layout>
 
 <style>
-	
+	html{
+		cursor: url("/puntero.png"), auto;
+	}
 </style>

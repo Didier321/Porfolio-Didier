@@ -1,0 +1,45 @@
+---
+const iconsHardSkills = [
+    {
+        name:"Docker",
+        urlIcon: "/IconDocker.png"
+    },
+    {
+        name:"Java",
+        urlIcon: "/IconJava.png"
+    },
+    {
+        name:"Spring",
+        urlIcon: "/IconSpring.png"
+    },
+    {
+        name:"Python",
+        urlIcon: "/IconPython.png"
+    },
+    {
+        name:"MySql",
+        urlIcon: "/IconMySql.png"
+    },
+    {
+        name:"GitHub",
+        urlIcon: "/IconGitHub.png"
+    },
+]
+---
+<hardSkills>
+    <h1 class="outfit text-white">Skills</h1>
+    <div class="flex flex-wrap justify-center gap-10">
+        {
+            iconsHardSkills.map((iconSkill) =>(
+                <div class="object-cover aspect-auto overflow-hidden grid grid-cols-1
+                bg-black/50 p-2 rounded-sm border-white/20 border-[1px]  shadow-md shadow-white/30
+                ">
+                    <h1 class="text-center ourfit ">{iconSkill.name}</h1>
+                    
+                    <img class="w-[80px]"
+                    src={iconSkill.urlIcon} alt="icons img skills">
+                </div>
+            ))
+        }
+    </div>
+</hardSkills>
