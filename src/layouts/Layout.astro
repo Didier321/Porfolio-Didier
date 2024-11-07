@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import 'aos/dist/aos.css';
 ---
 
 <!doctype html>
@@ -15,12 +16,16 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Indie+Flower&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body >
 		<slot />
+		<script> 
+			import AOS from "aos";
+			AOS.init(); 
+		</script> 
 	</body>
 </html>
 <style is:global>
@@ -41,6 +46,14 @@ const { title } = Astro.props;
 	font-family: "Indie Flower", cursive;
 	font-weight: 400;
 	font-style: normal;
+	}
+
+
+	.alumni-sans {
+		font-family: "Alumni Sans", sans-serif;
+		font-optical-sizing:auto;
+		font-weight: 500;
+		font-style: normal;
 	}
 
 	body{

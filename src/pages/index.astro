@@ -20,13 +20,18 @@ import HardSkills from '../components/HardSkills.astro';
 		<Header/>
 		<div class="md:max-w-[900px] mx-6 py-3 md:py-36">
 
-			<div  class="w-full flex ">
+			<div
+			data-aos="fade-down"
+			data-aos-anchor-placement="center-bottom"
+			class="w-full flex ">
 				<Home/>
 			</div>
-			<div class="w-full mt-8 ">
+			<div
+			data-aos="fade-right"
+			class="w-full mt-8 ">
 				<Badge Icon={IconGit} title="GitHub" link='https://github.com/Didier321'/>
 				<Badge Icon={IconLinkedin} title="Linkedin" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
-				<Badge Icon={IconEmail} title="Corre" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
+				<Badge Icon={IconEmail} title="Correo" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
 			</div>
 			<div class="w-full mt-28">
 				<Experience/>
