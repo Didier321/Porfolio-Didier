@@ -8,12 +8,14 @@ const {Icon, title, link} = Astro.props
 
 ---
 <badge>
-    <a href={link} class="
+    <a id="body-badge" href={link} class="
     inline-flex items-center justify-center p-0.5 mb-2 me-2 
     text-sm font-medium text-gray-900 rounded-full 
-    group bg-gradient-to-br from-pink-500 to-orange-400 
-    hover:border hover:shadow
+    group bg-gradient-to-br from-pink-500 to-orange-400\
+    transition duration-400 ease-in-out  hover:scale-125 hover:shadow-xl
+    
     ">
         <span class="flex gap-3 text-white py-3 px-6"><Icon/>{title}</span>
     </a>
 </badge>
+

@@ -1,11 +1,42 @@
 <home>
-    <h2 class="outfit text-6xl font-bold whitespace-pre-line "> Hola, Soy Didier Borja</h2>
-    <p class="outfit text-2xl mt-12">
-        <span class="text-[#CCCCCC]">Tecnólogo en
-        </span>
-        <span class="text-red-400">Análisis y Desarrollo de Software</span> 
-        <span class="text-[#CCCCCC]">de Medellín, Colombia. <br>Apasionado por el desarrollo de software e 
-        implementación <br> de</span> <span class="text-red-400">soluciones</span> <span class="text-[#CCCCCC]"> únicas, del lado backend.</span>
-    </p>
+    <div class="flex md:flex-row">
+        <div>
+            <h2 id="typewriter" class="outfit text-6xl font-bold whitespace-pre-line "></h2>
+            <p class="outfit text-2xl mt-12">
+                <span class="text-[#CCCCCC]">Tecnólogo en
+                </span>
+                <span class="text-red-400">Análisis y Desarrollo de Software</span> 
+                <span class="text-[#CCCCCC]">de Medellín, Colombia. <br>Apasionado por el desarrollo de software e 
+                implementación <br> de</span> <span class="text-red-400">soluciones</span> <span class="text-[#CCCCCC]"> únicas, del lado backend.</span>
+            </p>
+        </div>
+        <div class="flex justify-center items-center">
+            <div class="w-full h-1/2 inset-0">
+                <img class="w-0 md:w-56  animate-float " src="./Astronauta.png" alt="autronauta">
+            </div>
+        </div>
+    </div>
+    <script>
+        const words = ["Hola, Soy Didier Borja"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = true;
+        
+        function type() {
+            currentWord = words[i];
+            if (isDeleting) 
+            {
+            document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+            j++;
+            if (j == currentWord.length) {
+                isDeleting = false;
+            }
+        }
+        setTimeout(type, 100);
+        }
+        
+        type();
+    </script>
 
 </home>

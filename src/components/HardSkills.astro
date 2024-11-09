@@ -1,45 +1,59 @@
 ---
 const iconsHardSkills = [
-    {
-        name:"Docker",
-        urlIcon: "/IconDocker.png"
-    },
-    {
-        name:"Java",
-        urlIcon: "/IconJava.png"
-    },
-    {
-        name:"Spring",
-        urlIcon: "/IconSpring.png"
-    },
-    {
-        name:"Python",
-        urlIcon: "/IconPython.png"
-    },
-    {
-        name:"MySql",
-        urlIcon: "/IconMySql.png"
-    },
-    {
-        name:"GitHub",
-        urlIcon: "/IconGitHub.png"
-    },
-]
+  {
+    name: "Docker",
+    urlIcon: "/IconDocker.png",
+  },
+  {
+    name: "Java",
+    urlIcon: "/IconJava.png",
+  },
+  {
+    name: "Spring",
+    urlIcon: "/IconSpring.png",
+  },
+  {
+    name: "Python",
+    urlIcon: "/IconPython.png",
+  },
+  {
+    name: "MySql",
+    urlIcon: "/IconMySql.png",
+  },
+  {
+    name: "GitHub",
+    urlIcon: "/IconGitHub.png",
+  },
+];
 ---
+
 <hardSkills>
-    <h1 class="outfit text-white">Skills</h1>
-    <div class="flex flex-wrap justify-center gap-10">
-        {
-            iconsHardSkills.map((iconSkill) =>(
-                <div class="object-cover aspect-auto overflow-hidden grid grid-cols-1
-                bg-black/50 p-2 rounded-sm border-white/20 border-[1px]  shadow-md shadow-white/30
-                ">
-                    <h1 class="text-center ourfit ">{iconSkill.name}</h1>
-                    
-                    <img class="w-[80px]"
-                    src={iconSkill.urlIcon} alt="icons img skills">
-                </div>
-            ))
-        }
-    </div>
+  <h1 class="outfit text-white">Skills</h1>
+  <div class="flex flex-wrap justify-center gap-10">
+    {
+      iconsHardSkills.map((iconSkill) => (
+        <div id="card">
+          {/* <h1 class="text-center ourfit ">{iconSkill.name}</h1> */}
+
+          <img
+            class="w-[70px]  "
+            src={iconSkill.urlIcon}
+            alt="icons img skills"
+          />
+        </div>
+      ))
+    }
+  </div>
 </hardSkills>
+
+<style>
+    #card{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at 50% 50%, #f9dddd, #f4bbbb, #ee9898, #e47576, #d25558, #b44042, #932f31, #722121); /* made at https://learnui.design/tools/gradient-generator.html */
+    }
+</style>

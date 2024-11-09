@@ -10,12 +10,14 @@ import Aboutme from '../components/Aboutme.astro';
 import Proyects from '../components/Proyects.astro';
 import IconEmail from '../components/icons/IconEmail.astro';
 import HardSkills from '../components/HardSkills.astro';
+import ButtonDownloadCv from '../components/ButtonDownloadCv.astro';
+import IconDownload from '../components/icons/IconDownload.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex justify-center 
-	inset-0 -z-10  items-start px-5 py-24 
-	[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+	<main class="flex justify-center inset-0 items-start px-5 py-24 relative min-h-screen w-full bg-slate-950">
+
+	<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 	
 		<Header/>
 		<div class="md:max-w-[900px] mx-6 py-3 md:py-36">
@@ -29,6 +31,7 @@ import HardSkills from '../components/HardSkills.astro';
 			<div
 			data-aos="fade-right"
 			class="w-full mt-8 ">
+				<ButtonDownloadCv IconDownload={IconDownload}/>
 				<Badge Icon={IconGit} title="GitHub" link='https://github.com/Didier321'/>
 				<Badge Icon={IconLinkedin} title="Linkedin" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
 				<Badge Icon={IconEmail} title="Correo" link='https://www.linkedin.com/in/didier-casta%C3%B1eda-borja-741185274/'/>
