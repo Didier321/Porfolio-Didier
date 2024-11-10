@@ -1,59 +1,91 @@
 ---
+import IconSpring from '../components/icons/IconSpring.astro';
+import IconJava from '../components/icons/IconJava.astro';
+import IconPython from '../components/icons/IconPython.astro';
+import IconDocker from '../components/icons/IconDocker.astro';
+import IconMySql from '../components/icons/IconMySql.astro';
+import IconGitHub from '../components/icons/IconGitHub.astro';
+import IconGit from '../components/icons/IconGiit.astro';
+
+
 const iconsHardSkills = [
   {
     name: "Docker",
-    urlIcon: "/IconDocker.png",
+    Icon: "IconDocker",
   },
   {
     name: "Java",
-    urlIcon: "/IconJava.png",
+    Icon: "IconJava",
   },
   {
     name: "Spring",
-    urlIcon: "/IconSpring.png",
+    Icon: "IconSpring",
   },
   {
     name: "Python",
-    urlIcon: "/IconPython.png",
+    Icon: "IconPython",
   },
   {
     name: "MySql",
-    urlIcon: "/IconMySql.png",
+    Icon: "IconMySql",
+  },
+  {
+    name: "Git",
+    Icon: "IconGit",
   },
   {
     name: "GitHub",
-    urlIcon: "/IconGitHub.png",
+    Icon: "IconGitHub",
   },
 ];
 ---
 
 <hardSkills>
-  <h1 class="outfit text-white">Skills</h1>
+  <h1 class=" outfit text-3xl mb-16">Skills</h1>
   <div class="flex flex-wrap justify-center gap-10">
-    {
-      iconsHardSkills.map((iconSkill) => (
+    {iconsHardSkills.map((iconSkill) => {
+      const IconComponent = iconSkill.Icon;
+      return (
         <div id="card">
-          {/* <h1 class="text-center ourfit ">{iconSkill.name}</h1> */}
-
-          <img
-            class="w-[70px]  "
-            src={iconSkill.urlIcon}
-            alt="icons img skills"
-          />
+        <div id="icon">
+        {IconComponent == "IconSpring"?<IconSpring/>:
+        IconComponent == "IconJava"? <IconJava/>:
+        IconComponent == "IconPython"? <IconPython/>:
+        IconComponent == "IconDocker"? <IconDocker/>:
+        IconComponent == "IconMySql"? <IconMySql/>:
+        IconComponent == "IconGit"? <IconGit/>:
+        IconComponent == "IconGitHub"? <IconGitHub/>:null
+        }
         </div>
-      ))
-    }
+        <h1 class="text-center outfit mt-4 font-semibold text-2xl text-white">{iconSkill.name}</h1>
+      </div>
+      );
+    })}
   </div>
 </hardSkills>
 
 <style>
-    #card{
+    #icon{
         width: 150px;
         height: 150px;
-        border-radius: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: radial-gradient(circle at 50% 50%, #f9dddd, #f4bbbb, #ee9898, #e47576, #d25558, #b44042, #932f31, #722121); /* made at https://learnui.design/tools/gradient-generator.html */
     }
+
+    #card{
+      padding: 10px;
+      border-radius: 20px;
+      border: solid 3px rgba(255, 255, 255, 0.623);
+
+    }
+
+    #card{
+    background-image: radial-gradient(circle at 47.32% 42.63%, #21297486 0, #432b5557 25%, #2d1b5269 50%, #4e367a6c 75%, #3a2c508a 100%);
+}
+
+#card:hover{
+  box-shadow: 0px 0pc 10px rgba(255, 255, 255, 0.473);
+  scale: 1.1;
+}
 </style>
