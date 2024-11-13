@@ -1,17 +1,19 @@
 ---
 import ModalExperience from '../components/ModalExperience.astro';
 import { experiences } from "../content/experiences.js";
+
+
 ---
 
 <experience>
 
     <h1 class="outfit mb-10 text-3xl">Experincia Laboral</h1>
     {
-        experiences.map(experience => (
+        experiences.map((experience) => (
 
         <ol class="border-s border-gray-200 dark:border-gray-700 mb-4">                  
             <li class="ms-4">
-  
+
             <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <h3 class="outfit text-2xl font-semibold text-red-400 text-opacity-80">
                     {experience.role}
@@ -28,10 +30,21 @@ import { experiences } from "../content/experiences.js";
                 </p>
             </li>
             <li>
-                <ModalExperience experience={experience} />
+                <ModalExperience
+                    company={experience.company}
+                    companyDescription={experience.companyDescription}
+                    role={experience.role}
+                    employmentPeriod={experience.employmentPeriod}
+                    roleDescription={experience.roleDescription}
+                    keyResponsibilities={experience.keyResponsibilities}
+                    achievements={experience.achievements}
+                    technologiesAndTools={experience.technologiesAndTools}
+                />
+
             </li>
             
         </ol>
         ))
     }
+
 </experience>
